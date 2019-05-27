@@ -1,0 +1,11 @@
+<!--pages/history/history.wxml-->
+<view class='history'>
+  <view class='list-item' wx:for="{{list}}" wx:key="{{index}}">
+    <view>{{item.hid}}</view>
+    <view>{{item.sname}}</view>
+    <view>数量:{{item.total}}</view>
+    <view>温度:{{item.fell}}</view>
+    <view>配料:{{item.size}}</view>
+    <view>单价:{{item.price}}</view>
+  </view>
+</view>

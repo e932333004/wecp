@@ -1,0 +1,242 @@
+/* pages/tea/rea.wxss */
+
+/* 定位 */
+.local{
+  font-size: 24rpx;
+}
+/* canvas */
+swiper-item image{
+  margin: 0 auto;
+  display: block;
+}
+/* 导航 */
+
+.VerticalNav.nav {
+  width: 200rpx;
+  white-space: initial;
+}
+
+.VerticalNav.nav .cu-item {
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  margin: 0;
+  border: none;
+  height: 50px;
+  font-size: 24rpx;
+  line-height: 50px;
+  position: relative;
+}
+
+.VerticalNav.nav .cu-item.cur {
+  background-color: #f1f1f1;
+}
+
+.VerticalNav.nav .cu-item.cur::after {
+  content: "";
+  width: 8rpx;
+  color: #f00;
+  height: 50rpx;
+  border-radius: 10rpx 0 0 10rpx;
+  position: absolute;
+  background-color: currentColor;
+  top: 0;
+  right: 0rpx;
+  bottom: 0;
+  margin: auto;
+}
+
+.VerticalBox {
+  display: flex;
+  height: 100%;
+  position: relative;
+}
+
+/* 选择规格 */
+
+.choose {
+  border-radius: 20rpx;
+  width: 600rpx;
+  height: 1000rpx;
+  overflow: hidden;
+  position: absolute;
+  top: -200rpx;
+  left: 100rpx;
+  z-index: 999;
+  background: #fff;
+  border: 1rpx solid #000;
+}
+
+.choose image {
+  width: 600rpx;
+  height: 400rpx;
+}
+
+.choose>text {
+  margin: 5rpx 10rpx;
+  font-size: 32rpx;
+}
+
+.choose .close {
+  float: right;
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: #efefef;
+  padding: 0;
+  margin: 0;
+  border-radius: 100%;
+}
+
+.c-title{
+  padding-left: 10rpx;
+  font-size: 32rpx;
+}
+/* 温度 */
+
+.teml {
+  display: flex;
+  justify-content: space-around;
+}
+
+.teml text {
+  font-size: 28rpx;
+  padding: 10rpx 15rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid #efefef;
+}
+
+.nck {
+  background: #0af;
+  color: #fff;
+}
+
+/* 数量 */
+
+.more {
+  margin: 20rpx auto;
+  width: 200rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.more button {
+  line-height: 30rpx;
+  margin: 0;
+  padding: 10rpx;
+}
+
+/* 提交订单 */
+
+.btn-sub {
+  margin-top: 10rpx;
+}
+
+.VerticalMain {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+/* 导航标题 */
+
+.action {
+  font-size: 32rpx;
+  text-align: center;
+  padding: 10rpx 0;
+}
+
+.cuIcon-title {
+  color: #f00;
+}
+
+/* 内容 */
+
+.bg-white {
+  background-color: #fff;
+  margin: 20rpx;
+  padding: 10rpx;
+  font-size: 24rpx;
+}
+
+/* 图片 */
+
+.shop-img {
+  height: 100rpx;
+  width: 100rpx;
+}
+
+/* 名字内容 */
+
+.cu-item {
+  border-top: 1px solid #efefef;
+  display: flex;
+  justify-content: space-around;
+  padding: 10rpx 0;
+}
+
+.content {
+  display: flex;
+  text-align: left;
+  padding: 0 20rpx;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.text-cut {
+  width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 价格数量 */
+
+.total {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.price {
+  text-align: center;
+  font-size: 24rpx;
+}
+
+.count {
+  width: 120rpx;
+  font-size: 24rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.count view {
+  display: inline-block;
+}
+
+.count button {
+  display: inline-block;
+  width: 100%;
+  height: 34rpx;
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+  background: #f00;
+  padding: 0;
+  line-height: normal;
+  font-size: 24rpx;
+}
+
+.count button text {
+  line-height: 34rpx;
+}
+
+.count button.button-hover {
+  background: #a00;
+}

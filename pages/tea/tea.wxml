@@ -1,0 +1,79 @@
+<!--pages/tea/tea.wxml-->
+<!-- 定位 -->
+<view class='local'>
+	<view>地址：{{address}}</view>
+</view>
+<!-- 轮播图 -->
+<swiper autoplay='true' circular='true' indicator-dots='true'>
+  <swiper-item wx:for="{{canvas}}" wx:key>
+    <image src='{{url+item.pic}}'></image>
+  </swiper-item>
+</swiper>
+
+<view wx:if="{{list}}" class="VerticalBox">
+  <!-- 规格 -->
+  <view wx:if="{{show===true}}" class='choose'>
+    <button class='close' bindtap='close'>x</button>
+    <image mode='aspectFill' src='{{url+pic}}'></image>
+    <text>{{sname}}</text>
+    <view>
+      <view>
+        <text class='c-title'>温度</text>
+        <view class='teml'>
+          <text wx:for="{{tem}}" bindtap='cked' wx:key="{{index}}" class="{{index===ckd?'nck':''}}" data-t="{{index}}">{{item}}</text>
+        </view>
+      </view>
+      <view>
+        <text class='c-title'>规格</text>
+        <view class='teml'>
+          <text wx:for="{{size}}" wx:key data-s="{{index}}" class="{{index===cks?'nck':''}}" bindtap='cs'>{{item}}</text>
+        </view>
+      </view>
+      <view class='more'>
+        <button bindtap='sub'>-</button>
+        <text>{{total}}</text>
+        <button bindtap='add'>+</button>
+      </view>
+      <view>总价：￥{{total*p}}</view>
+      <button class='btn-sub' bindtap='shopcart'>添加到购物车</button>
+    </view>
+  </view>
+  <!-- 左边导航栏 -->
+  <scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}" style="height:calc(100vh - 360rpx)">
+    <view class="cu-item {{index==TabCur?'cur':''}}" wx:for="{{list}}" wx:key bindtap='tabSelect' data-id="{{index}}">
+      {{item.name}}
+    </view>
+  </scroll-view>
+  <!-- 右边商品 -->
+  <scroll-view class="VerticalMain" scroll-y scroll-with-animation style="height:calc(100vh - 360rpx)" scroll-into-view="main-{{MainCur}}" bindscroll="VerticalMain">
+    <view class="bg-white" wx:for="{{list}}" wx:key id="main-{{index}}">
+      <!-- 标题 -->
+      <view class='action'>
+        <text class='cuIcon-title'>◎＿</text>{{item.name}}
+      </view>
+      <!-- 内容 -->
+      <view class="cu-list" wx:for="{{item.data}}" wx:key>
+        <view class="cu-item">
+          <!-- 商品图片 -->
+          <image class="shop-img" mode='aspectFill' src='{{url+item.pic}}'></image>
+          <!-- 商品信息 -->
+          <view class="content">
+            <!-- 商品名字 -->
+            <view class="text-grey">{{item.name}}</view>
+            <!-- 商品详情 -->
+            <text class="text-cut">{{item.details}}</text>
+          </view>
+          <!-- 价格 数量 -->
+          <view class="total">
+            <view class="price">￥{{item.price}}</view>
+            <view class="count">
+              <button data-item="{{item}}" bindtap='showchange'>
+                <text>选择规格</text>
+              </button>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

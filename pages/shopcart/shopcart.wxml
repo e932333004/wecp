@@ -1,0 +1,42 @@
+<!--pages/shopcart/shopcart.wxml-->
+<!-- 没有数据显示 -->
+<view wx:if="{{list.length==0}}">
+  <view class='notshop'>
+    <view>
+      <text>购物车没有商品</text>
+    </view>
+    <navigator class='gohome' url="/pages/tea/tea" open-type='switchTab'>去点单</navigator>
+    <view>
+      <navigator url='/pages/history/history'>历史订单</navigator>
+    </view>
+  </view>
+</view>
+
+<!-- 有数据 -->
+<view class='carshop' wx:if="{{list.length>0}}">
+    <view wx:for="{{list}}" wx:key class='list'>
+      <image class='list-img' src='{{url+item.pic}}'></image>
+      <text>{{item.sname}}</text>
+      <text>规格：{{item.fell}}</text>
+      <text>配料：{{item.size}}</text>
+      <view class='change'>
+        <button data-id="{{index}}" bindtap='sub'>-</button>
+        <view>{{item.total}}</view>
+        <button data-id="{{index}}" bindtap='add'>+</button>
+      </view>
+      <view class='del' data-id="{{index}}" bindtap='del'>删除</view>
+
+
+    <view class='clear'>
+      <text bindtap='clear'>清空购物车</text>
+    </view>
+  </view>
+
+  <view class='pay'>
+    <view>
+      <image src='/pages/tabs/shop.png'></image>
+    </view>
+    <view class='total'>￥{{total}}</view>
+    <button bindtap='addlist'>结算</button>
+  </view>
+</view>

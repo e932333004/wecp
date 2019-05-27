@@ -1,0 +1,95 @@
+/* pages/shopcart/shopcart.wxss */
+.notshop{
+  margin: 40rpx;
+  border-radius: 10rpx;
+  height: 700rpx;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+/* 去首页 */
+.gohome{
+  margin: 0 auto ;
+  color: #fff;
+  width: 85%;
+  padding: 10rpx 0;
+  border-radius: 5rpx;
+  background-color: #f50;
+}
+/* list */
+.list{
+  padding: 10rpx;
+  height: 50rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.list text{
+  font-size: 32rpx;
+  line-height: 50rpx;
+}
+.list-img{
+  width: 50rpx;
+  height:50rpx;
+}
+
+.change{
+  line-height: 50rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.change text{
+  line-height: 50rpx;
+  font-size: 32rpx;
+}
+.change button{
+   line-height: 30rpx;
+  padding: 10rpx;
+  margin: 0;
+}
+
+/* 清除按钮 */
+.clear{
+  position: absolute;
+  right: 25rpx;
+  bottom: 120rpx;
+}
+.clear text{
+  font-size: 24rpx;
+  color: #666;
+}
+.del{
+  font-size: 32rpx;
+  color: #00f;
+}
+
+/* 底部结算 */
+.pay{
+  background: #efefef;
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+ .pay image{
+   margin-top: 10px;
+  width: 30px;
+  height: 30px;
+}
+.pay button{
+  color: #fff;
+  background: #f50;
+  width: 100px;
+  margin-right: 15px;
+}
+.pay button.button-hover{
+  background: #f90;
+}
+.pay .total{
+  color: #f00;
+  line-height: 50px;
+  margin-left: 10px;
+}

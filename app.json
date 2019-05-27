@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/tea/tea",
+    "pages/index/index",
+    "pages/shopcart/shopcart",
+    "pages/logs/logs",
+    "pages/me/me",
+    "pages/history/history"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/tea/tea",
+        "text": "首页",
+        "iconPath": "pages/tabs/home.png",
+        "selectedIconPath": "pages/tabs/home-active.png"
+      },
+      {
+        "pagePath": "pages/shopcart/shopcart",
+        "text": "购物车",
+        "iconPath": "pages/tabs/message.png",
+        "selectedIconPath": "pages/tabs/message-active.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "个人中心",
+        "iconPath": "pages/tabs/profile.png",
+        "selectedIconPath": "pages/tabs/profile-active.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

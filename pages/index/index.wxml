@@ -1,0 +1,6 @@
+<!--index.wxml-->
+
+<view class='local'>
+	<view>城市：{{cityInfo.city}}</view>
+	<view>地址：{{address}}</view>
+</view>

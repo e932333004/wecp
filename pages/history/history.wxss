@@ -1,0 +1,12 @@
+/* pages/history/history.wxss */
+.history{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.list-item{
+  padding: 20rpx;
+  font-size: 32rpx;
+  display: flex;
+  justify-content: space-around;
+}
